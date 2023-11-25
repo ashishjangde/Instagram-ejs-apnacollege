@@ -1,0 +1,25 @@
+<%- include("includes/head.ejs") %>
+<body>
+   <style>
+      img{
+         height: 100px;
+         width: 100px;
+      }
+    </style>
+    <h1> You Contacted for <%= data.name %></h1>
+    <button>Follow</button>
+    <button>Message</button>
+    <h2>Followers <%= data.followers %> &nbsp; &nbsp;  &nbsp; &nbsp;  Following <%= data.following %></h2>
+     <hr>
+     <% for (let post of data.posts ) { %>
+      <img src="<%= post.image %>" alt="some imag">
+      <p>
+         Likes: <%= post.likes %> &nbsp;&nbsp; &nbsp;&nbsp; Comments: <%= post.comments %>
+      </p>
+      <% } %>
+      <%- include("includes/footer.ejs") %>
+</body>
+</html>
+
+
+
